@@ -1,11 +1,15 @@
 from tkinter import *
 from tkinter import messagebox
 import sqlite3
+from dpi import set_dpi
 
 root = Tk()
 root.title("ASWL traceability record")
 root.geometry("700x300")
+root.resizable(False, False)
 root.iconbitmap('SoftLan.ico')
+
+set_dpi()
 
 # Create a database
 conn = sqlite3.connect('ASWL.db')
